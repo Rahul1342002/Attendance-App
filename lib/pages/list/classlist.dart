@@ -12,7 +12,7 @@ class ClassList extends StatelessWidget {
         body: 
         ListView(children: [
           
-          Nav(),ClassTab(numberOfContainers: 99),
+          Nav(),ClassTab(numberOfContainers: 118),
 
         ]),
       ),

@@ -14,6 +14,8 @@ class _ClassTabState extends State<ClassTab> {
   List<bool> isBoxTappedList = [];
   final List<String> rollNumbers = [
     for (int i = 501; i <= 599; i++) i.toString(),
+    for (int i = 0; i <= 9; i++) '5A$i',
+    for (int i = 0; i <= 8; i++) '5B$i',
   ];
   @override
   void initState() {
@@ -51,6 +53,8 @@ class _ClassTabState extends State<ClassTab> {
                       isBoxTappedList[rollNumberIndex] =
                           !isBoxTappedList[rollNumberIndex];
                     });
+                    print(
+                        "Tapped container number: ${rollNumbers[rollNumberIndex]}");
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
