@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'components/header.dart';
+
+import '../../globalWidgets/navBar.dart';
 import 'components/classtab.dart';
 
 class ClassList extends StatelessWidget {
@@ -9,12 +10,12 @@ class ClassList extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: 
-        ListView(children: [
-          
-          Nav(),ClassTab(numberOfContainers: 118),
-
-        ]),
+        body: ListView(
+          children: [
+            const Nav(),
+            ClassTab(numberOfContainers: 118),
+          ],
+        ),
       ),
     );
   }

@@ -39,6 +39,7 @@ class _ClassTabState extends State<ClassTab> {
               ? widget.numberOfContainers
               : (startIndex + 5);
           return Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(
               endIndex - startIndex,
               (index) {

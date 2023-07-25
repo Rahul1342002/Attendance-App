@@ -38,7 +38,9 @@ dependencies:
   go_router: ^9.0.3
   iconsax: ^0.0.8
   flutter_advanced_calendar: ^1.4.1
-  table_calendar: ^3.0.9
+  simple_gesture_detector: ^0.2.0
+  intl: ^0.18.1
+  flutter_expandable_fab: ^1.8.1
 
 dev_dependencies:
   flutter_test:

@@ -3,7 +3,7 @@
 
 import 'dart:collection';
 
-import 'package:table_calendar/table_calendar.dart';
+import 'package:attendance/tableCalendar/table_calendar.dart';
 
 /// Example event class.
 class Event {

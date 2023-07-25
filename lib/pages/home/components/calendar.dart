@@ -1,9 +1,13 @@
+import 'package:attendance/tableCalendar/table_calendar.dart';
 import 'package:flutter/material.dart';
-import 'package:table_calendar/table_calendar.dart';
+import 'package:go_router/go_router.dart';
 
 class CalendarScreen extends StatefulWidget {
+  final Widget navWidget;
+  const CalendarScreen({super.key, required this.navWidget});
+
   @override
-  _CalendarScreenState createState() => _CalendarScreenState();
+  State<CalendarScreen> createState() => _CalendarScreenState();
 }
 
 class _CalendarScreenState extends State<CalendarScreen> {
@@ -14,26 +18,39 @@ class _CalendarScreenState extends State<CalendarScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-        left: 27,
-        top: 50,
-        child: TableCalendar(
-          focusedDay: today,
-          firstDay: DateTime.utc(2010, 10, 16),
-          lastDay: DateTime.utc(2030, 3, 14),
-          headerStyle: HeaderStyle(
-              formatButtonVisible: false,
-              titleCentered: true,
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  boxShadow: const [
-                    const BoxShadow(
-                        color: Colors.black,
-                        blurRadius: 10,
-                        spreadRadius: 1,
-                        offset: Offset(4, 4)),
-                  ],
-                  borderRadius: BorderRadius.all(Radius.circular(50)))),
-        ));
+    return TableCalendar(
+      navWidget: widget.navWidget,
+      focusedDay: today,
+      calendarFormat: _calendarFormat,
+      currentDay: _selectedDay,
+      firstDay: DateTime.utc(2010, 10, 16),
+      lastDay: DateTime.utc(2030, 3, 14),
+      onDaySelected: (_, current) {
+        setState(() {
+          _selectedDay = current;
+        });
+        GoRouter.of(context).push("/sections");
+      },
+      headerStyle: const HeaderStyle(
+        headerMargin: EdgeInsets.only(left: 26, right: 26),
+        headerPadding: EdgeInsets.all(6),
+        formatButtonVisible: false,
+        titleCentered: true,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black,
+              blurRadius: 4,
+              spreadRadius: 0,
+              offset: Offset(1, 1),
+            ),
+          ],
+          borderRadius: BorderRadius.all(
+            Radius.circular(50),
+          ),
+        ),
+      ),
+    );
   }
 }

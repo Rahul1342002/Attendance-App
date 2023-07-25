@@ -3,10 +3,11 @@
 
 import 'dart:collection';
 
+import 'package:attendance/tableCalendar/table_calendar.dart';
 import 'package:flutter/material.dart';
-import 'package:table_calendar/table_calendar.dart';
 
 import './utils.dart';
+import '../../../globalWidgets/navBar.dart';
 
 class TableMultiExample extends StatefulWidget {
   @override
@@ -67,6 +68,7 @@ class _TableMultiExampleState extends State<TableMultiExample> {
       body: Column(
         children: [
           TableCalendar<Event>(
+            navWidget: const Nav(),
             firstDay: kFirstDay,
             lastDay: kLastDay,
             focusedDay: _focusedDay,
