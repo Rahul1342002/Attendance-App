@@ -28,28 +28,28 @@ class Nav extends StatelessWidget {
                   ),
                 ),
               ),
-              // Positioned(
-              //   left: 27,
-              //   top: 68,
-              //   child: Container(
-              //     width: 375,
-              //     height: 60,
-              //     decoration: ShapeDecoration(
-              //       color: Colors.white,
-              //       shape: RoundedRectangleBorder(
-              //         borderRadius: BorderRadius.circular(100),
-              //       ),
-              //       shadows: [
-              //         BoxShadow(
-              //           color: Color(0x3F000000),
-              //           blurRadius: 4,
-              //           offset: Offset(0, 4),
-              //           spreadRadius: 0,
-              //         )
-              //       ],
-              //     ),
-              //   ),
-              // ),
+              Positioned(
+                left: 27,
+                top: 68,
+                child: Container(
+                  width: 375,
+                  height: 60,
+                  decoration: ShapeDecoration(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    shadows: [
+                      BoxShadow(
+                        color: Color(0x3F000000),
+                        blurRadius: 4,
+                        offset: Offset(0, 4),
+                        spreadRadius: 0,
+                      )
+                    ],
+                  ),
+                ),
+              ),
               const Positioned(
                 left: 61,
                 top: 17,
@@ -68,59 +68,59 @@ class Nav extends StatelessWidget {
                   ),
                 ),
               ),
-              // const Positioned(
-              //   left: 27,
-              //   top: 84,
-              //   child: SizedBox(
-              //     width: 375,
-              //     height: 60,
-              //     child: Text(
-              //       'January, 2023',
-              //       textAlign: TextAlign.center,
-              //       style: TextStyle(
-              //         color: Colors.black,
-              //         fontSize: 20,
-              //         fontFamily: 'Poppins',
-              //         fontWeight: FontWeight.w600,
-              //       ),
-              //     ),
-              //   ),
-              // ),
-              // Positioned(
-              //   left: 368,
-              //   top: 86,
-              //   child: Container(
-              //     width: 24,
-              //     height: 24,
-              //     clipBehavior: Clip.antiAlias,
-              //     decoration: BoxDecoration(),
-              //     child: Icon(Iconsax.arrow_right_3,
-              //     color: Colors.blue.shade400,),
-              //   ),
-              // ),
-              // Positioned(
-              //   left: 37,
-              //   top: 86,
-              //   child: Container(
-              //     width: 24,
-              //     height: 24,
-              //     clipBehavior: Clip.antiAlias,
-              //     decoration: BoxDecoration(),
-              //     child: Icon(Iconsax.arrow_left_2,
-              //     color: Colors.blue.shade400,
-              //     ),
-              //   ),
-              // ),
-              // Positioned(
-              //   left: 15,
-              //   top: 17 ,
-              //   child: Container(
-              //     width: 30,
-              //     height: 30,
-              //     clipBehavior: Clip.antiAlias,
-              //     decoration: BoxDecoration(),
-              //     child: Icon(Iconsax.textalign_left),),
-              //   ),
+              const Positioned(
+                left: 27,
+                top: 84,
+                child: SizedBox(
+                  width: 375,
+                  height: 60,
+                  child: Text(
+                    'January, 2023',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 368,
+                top: 86,
+                child: Container(
+                  width: 24,
+                  height: 24,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: BoxDecoration(),
+                  child: Icon(Iconsax.arrow_right_3,
+                  color: Colors.blue.shade400,),
+                ),
+              ),
+              Positioned(
+                left: 37,
+                top: 86,
+                child: Container(
+                  width: 24,
+                  height: 24,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: BoxDecoration(),
+                  child: Icon(Iconsax.arrow_left_2,
+                  color: Colors.blue.shade400,
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 15,
+                top: 17 ,
+                child: Container(
+                  width: 30,
+                  height: 30,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: BoxDecoration(),
+                  child: Icon(Iconsax.textalign_left),),
+                ),
             ],
           ),
         ),

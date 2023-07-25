@@ -13,7 +13,7 @@ final GoRouter Routes = GoRouter(
     GoRoute(
         path: "/",
         builder: (BuildContext context, GoRouterState state) {
-          return const ClassList();
+          return const Home();
         }),
   ],
 );

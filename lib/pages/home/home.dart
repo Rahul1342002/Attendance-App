@@ -1,4 +1,6 @@
 import 'package:attendance/pages/home/components/header.dart';
+import 'package:attendance/pages/home/components/statistics.dart';
+import 'package:attendance/pages/home/components/totalStudent.dart';
 
 import 'package:flutter/material.dart';
 import 'components/header.dart';
@@ -14,7 +16,10 @@ class Home extends StatelessWidget {
       
       home: Scaffold(
         body: ListView(children: [
-          Nav(),CalendarScreen()
+          Nav(),CalendarScreen(),
+          Padding(padding: EdgeInsets.only(top: 20)),
+          totalStudent(),
+          Padding(padding: EdgeInsets.only(top: 20)), Statics()
           
         ]),
       ),
