@@ -1,3 +1,4 @@
+import 'package:attendance/pages/sections/components/header.dart';
 import 'package:flutter/material.dart';
 
 import '../../globalWidgets/navBar.dart';
@@ -12,7 +13,7 @@ class Section extends StatelessWidget {
       home: Scaffold(
         body: ListView(
           children: const [
-            Nav(),
+            Nav1(),
             Sect(),
           ],
         ),

@@ -1,7 +1,8 @@
+import 'package:attendance/pages/list/components/header.dart';
 import 'package:flutter/material.dart';
 
 import '../../globalWidgets/navBar.dart';
-import 'components/classtab.dart';
+import 'components/classlist.dart';
 
 class ClassList extends StatelessWidget {
   const ClassList({Key? key}) : super(key: key);
@@ -12,8 +13,9 @@ class ClassList extends StatelessWidget {
       home: Scaffold(
         body: ListView(
           children: [
-            const Nav(),
-            ClassTab(numberOfContainers: 118),
+            const Nav2(),
+            
+            ClassTab(),
           ],
         ),
       ),
