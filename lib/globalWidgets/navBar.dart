@@ -6,7 +6,7 @@ class Nav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 128,
+      height: 150,
       decoration: const ShapeDecoration(
         color: Color(0xFF568EF8),
         shape: RoundedRectangleBorder(
@@ -21,7 +21,7 @@ class Nav extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.only(top: 24),
+            padding: EdgeInsets.only(top: 60),
             child: Text(
               "Attendance",
               style: TextStyle(

@@ -1,8 +1,9 @@
 import 'package:attendance/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -15,9 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Attendance',
       // home: const MyHomePage(title: 'Home Page'),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        scaffoldBackgroundColor:  Color(0xFF568EF8)
-      ),
+      theme: ThemeData(scaffoldBackgroundColor: Color(0xFF568EF8)),
       routerConfig: Routes,
     );
   }

@@ -1,17 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:intl/intl.dart';
 
-class SectionContainer extends StatelessWidget {
+import '../../../services/student_stats_on_date_basis/student_stats_network_provider.dart';
+
+class SectionContainer extends ConsumerWidget {
   final String sectionName;
   const SectionContainer({super.key, required this.sectionName});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final studentStatsNotifier =
+        ref.watch(studentStatsNetworkProvider.notifier);
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: GestureDetector(
         onTap: () {
-          GoRouter.of(context).push("/classlist");
+          final name = sectionName.replaceAll(" ", "-");
+          final todayDate = DateTime.now();
+          final formatter = DateFormat('dd-MM-yyyy');
+          final String formattedDate = formatter.format(todayDate);
+          studentStatsNotifier.getStats(formattedDate, "CSE", name);
+          GoRouter.of(context).push("/home?section=$name");
         },
         child: Container(
           width: 160,

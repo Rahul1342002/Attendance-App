@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class totalStudent extends StatefulWidget {
-  const totalStudent({super.key});
+  final int students;
+  const totalStudent({super.key, required this.students});
 
   @override
   State<totalStudent> createState() => _totalStudentState();
@@ -76,7 +77,7 @@ class _totalStudentState extends State<totalStudent> {
                 width: 38,
                 height: 38,
                 child: Text(
-                  '38',
+                  widget.students.toString(),
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,

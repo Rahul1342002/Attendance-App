@@ -1,16 +1,20 @@
+import 'package:attendance/services/student_stats_on_date_basis/student_stats_network_provider.dart';
 import 'package:attendance/tableCalendar/table_calendar.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
 
-class CalendarScreen extends StatefulWidget {
+class CalendarScreen extends ConsumerStatefulWidget {
+  final String sectionName;
   final Widget navWidget;
-  const CalendarScreen({super.key, required this.navWidget});
+  const CalendarScreen(
+      {super.key, required this.navWidget, required this.sectionName});
 
   @override
-  State<CalendarScreen> createState() => _CalendarScreenState();
+  ConsumerState<CalendarScreen> createState() => _CalendarScreenState();
 }
 
-class _CalendarScreenState extends State<CalendarScreen> {
+class _CalendarScreenState extends ConsumerState<CalendarScreen> {
   CalendarFormat _calendarFormat = CalendarFormat.month;
   DateTime _selectedDay = DateTime.now();
 
@@ -18,6 +22,8 @@ class _CalendarScreenState extends State<CalendarScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final studentsStatsNotifier =
+        ref.watch(studentStatsNetworkProvider.notifier);
     return TableCalendar(
       navWidget: widget.navWidget,
       focusedDay: today,
@@ -28,11 +34,15 @@ class _CalendarScreenState extends State<CalendarScreen> {
       onDaySelected: (_, current) {
         setState(() {
           _selectedDay = current;
+          final formatter = DateFormat('dd-MM-yyyy');
+          final String formattedDate = formatter.format(current);
+          studentsStatsNotifier.getStats(
+              formattedDate, "CSE", widget.sectionName);
         });
-        GoRouter.of(context).push("/sections");
+        // GoRouter.of(context).push("/classlist");
       },
       headerStyle: const HeaderStyle(
-        headerMargin: EdgeInsets.only(left: 26, right: 26),
+        headerMargin: EdgeInsets.only(left: 26, right: 26, top: 26),
         headerPadding: EdgeInsets.all(6),
         formatButtonVisible: false,
         titleCentered: true,

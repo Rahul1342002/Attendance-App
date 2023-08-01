@@ -5,12 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter Routes = GoRouter(
-  initialLocation: "/",
+  initialLocation: "/sections",
   routes: [
     GoRoute(
-      path: "/",
+      path: "/home",
       builder: (BuildContext context, GoRouterState state) {
-        return const Home();
+        return Home(
+          sectionName: state.queryParameters["section"]!,
+        );
       },
     ),
     GoRoute(
