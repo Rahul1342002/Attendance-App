@@ -40,7 +40,7 @@ dependencies:
   flutter_advanced_calendar: ^1.4.1
   simple_gesture_detector: ^0.2.0
   intl: ^0.18.1
-  flutter_expandable_fab: ^1.8.1
+  flutter_expandable_fab: ^2.0.0
   riverpod: ^2.3.6
   http: ^1.1.0
   flutter_riverpod: ^2.3.6

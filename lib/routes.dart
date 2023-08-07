@@ -24,7 +24,10 @@ final GoRouter Routes = GoRouter(
     GoRoute(
       path: "/classlist",
       builder: (BuildContext context, GoRouterState state) {
-        return const ClassList();
+        return ClassList(
+          sectionName: state.queryParameters["section"]!,
+          date: state.queryParameters["date"]!,
+        );
       },
     ),
   ],

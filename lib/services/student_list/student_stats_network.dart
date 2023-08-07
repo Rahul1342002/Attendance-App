@@ -1,13 +1,13 @@
 import 'dart:convert';
 
-import 'package:attendance/services/student_stats_on_date_basis/student_stats_network_state.dart';
+import 'package:attendance/services/student_list/student_stats_network_state.dart';
 import 'package:http/http.dart' as http;
 
-Future<StudentStats> fetchStudentStats(
+Future<StudentsList> fetchStudentList(
     String date, String branch, String section) async {
   var headers = {'Content-Type': 'application/json'};
   var request = http.Request(
-      'POST', Uri.parse('http://127.0.0.1:16000/getStudentsStats'));
+      'POST', Uri.parse('http://127.0.0.1:16000/getStudentDetails'));
   request.body =
       json.encode({"date": date, "branch": branch, "section": section});
   request.headers.addAll(headers);
@@ -19,7 +19,7 @@ Future<StudentStats> fetchStudentStats(
   final jsonDecodedData = json.decode(responseData);
 
   if (response.statusCode == 200) {
-    return StudentStats.fromJson(jsonDecodedData);
+    return StudentsList.fromJson(jsonDecodedData);
   } else {
     throw FormatException(jsonDecodedData["msg"]!);
   }

@@ -74,10 +74,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_expandable_fab
-      sha256: "43147571b147e80511d7f9bd143300f4b1b881e2beaf7f83f0eccb5d88a4112b"
+      sha256: "2aa5735bebcdbc49f43bcb32a29f9f03a9b7029212b8cd9837ae332ab2edf647"
       url: "https://pub.dev"
     source: hosted
-    version: "1.8.1"
+    version: "2.0.0"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -108,10 +108,10 @@ packages:
     dependency: "direct main"
     description:
       name: go_router
-      sha256: b33a88c67816312597e5e0f5906c5139a0b9bd9bb137346e872c788da7af8ea0
+      sha256: edbceb4c06758652fc9d12e58edb371cd977011b032e298dae0eb357167baad2
       url: "https://pub.dev"
     source: hosted
-    version: "9.0.3"
+    version: "9.1.1"
   http:
     dependency: "direct main"
     description:

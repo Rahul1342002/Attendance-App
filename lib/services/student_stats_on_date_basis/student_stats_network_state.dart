@@ -73,6 +73,9 @@ class StudentStatsNetworkNotifier extends ChangeNotifier {
   }
 
   void getStats(String date, String branch, String section) {
+    print(date);
+    print(branch);
+    print(section);
     _updateStateByFetch(date, branch, section);
   }
 }

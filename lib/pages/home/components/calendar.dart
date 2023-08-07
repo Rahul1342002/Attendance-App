@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
+import '../../../services/date_provider.dart';
+
 class CalendarScreen extends ConsumerStatefulWidget {
   final String sectionName;
   final Widget navWidget;
@@ -38,6 +40,7 @@ class _CalendarScreenState extends ConsumerState<CalendarScreen> {
           final String formattedDate = formatter.format(current);
           studentsStatsNotifier.getStats(
               formattedDate, "CSE", widget.sectionName);
+          ref.read(dateProvider.notifier).updateDate(current);
         });
         // GoRouter.of(context).push("/classlist");
       },
