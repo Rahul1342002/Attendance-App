@@ -12,7 +12,7 @@ class _totalStudentState extends State<totalStudent> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Container(
+      child: SizedBox(
         width: 375,
         height: 94,
         child: Stack(
@@ -28,7 +28,7 @@ class _totalStudentState extends State<totalStudent> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  shadows: [
+                  shadows: const [
                     BoxShadow(
                       color: Color(0x3F000000),
                       blurRadius: 4,
@@ -39,7 +39,7 @@ class _totalStudentState extends State<totalStudent> {
                 ),
               ),
             ),
-            Positioned(
+            const Positioned(
               left: 26,
               top: 34,
               child: SizedBox(
@@ -63,7 +63,7 @@ class _totalStudentState extends State<totalStudent> {
                 width: 38,
                 height: 38,
                 decoration: ShapeDecoration(
-                  color: Color(0xFF568EF8),
+                  color: const Color(0xFF568EF8),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -79,7 +79,7 @@ class _totalStudentState extends State<totalStudent> {
                 child: Text(
                   widget.students.toString(),
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontFamily: 'Poppins',

@@ -1,7 +1,6 @@
 import 'package:attendance/pages/list/components/header.dart';
 import 'package:flutter/material.dart';
 
-import '../../globalWidgets/navBar.dart';
 import 'components/classlist.dart';
 
 class ClassList extends StatelessWidget {

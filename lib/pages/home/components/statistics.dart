@@ -14,7 +14,7 @@ class _StaticsState extends State<Statics> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Container(
+      child: SizedBox(
         width: 375,
         height: 211,
         child: Stack(
@@ -22,7 +22,7 @@ class _StaticsState extends State<Statics> {
             Positioned(
               left: 0,
               top: 0,
-              child: Container(
+              child: SizedBox(
                 width: 172,
                 height: 211,
                 child: Stack(
@@ -34,11 +34,11 @@ class _StaticsState extends State<Statics> {
                         width: 172,
                         height: 211,
                         decoration: ShapeDecoration(
-                          color: Color(0xFFFF4881),
+                          color: const Color(0xFFFF4881),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30),
                           ),
-                          shadows: [
+                          shadows: const [
                             BoxShadow(
                               color: Color(0x3F000000),
                               blurRadius: 4,
@@ -57,7 +57,7 @@ class _StaticsState extends State<Statics> {
                         height: 108,
                         child: Text(
                           widget.totalAbsent.toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 76,
                             fontFamily: 'Poppins',
@@ -66,7 +66,7 @@ class _StaticsState extends State<Statics> {
                         ),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       left: 26,
                       top: 19,
                       child: SizedBox(
@@ -90,7 +90,7 @@ class _StaticsState extends State<Statics> {
             Positioned(
               left: 203,
               top: 0,
-              child: Container(
+              child: SizedBox(
                 width: 172,
                 height: 211,
                 child: Stack(
@@ -102,11 +102,11 @@ class _StaticsState extends State<Statics> {
                         width: 172,
                         height: 211,
                         decoration: ShapeDecoration(
-                          color: Color(0xFF21D2FF),
+                          color: const Color(0xFF21D2FF),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30),
                           ),
-                          shadows: [
+                          shadows: const [
                             BoxShadow(
                               color: Color(0x3F000000),
                               blurRadius: 4,
@@ -117,7 +117,7 @@ class _StaticsState extends State<Statics> {
                         ),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       left: 29,
                       top: 19,
                       child: SizedBox(
@@ -142,7 +142,7 @@ class _StaticsState extends State<Statics> {
                         height: 108,
                         child: Text(
                           widget.totalPresent.toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 76,
                             fontFamily: 'Poppins',

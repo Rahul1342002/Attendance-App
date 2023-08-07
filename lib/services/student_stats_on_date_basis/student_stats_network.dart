@@ -7,7 +7,7 @@ Future<StudentStats> fetchStudentStats(
     String date, String branch, String section) async {
   var headers = {'Content-Type': 'application/json'};
   var request = http.Request(
-      'POST', Uri.parse('http://localhost:16000/getStudentsStats'));
+      'POST', Uri.parse('http://192.168.0.102:16000/getStudentsStats'));
   request.body =
       json.encode({"date": date, "branch": branch, "section": section});
   request.headers.addAll(headers);

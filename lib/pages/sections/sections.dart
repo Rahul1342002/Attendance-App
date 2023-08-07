@@ -1,7 +1,6 @@
 import 'package:attendance/pages/sections/components/header.dart';
 import 'package:flutter/material.dart';
 
-import '../../globalWidgets/navBar.dart';
 import 'components/sect.dart';
 
 class Section extends StatelessWidget {

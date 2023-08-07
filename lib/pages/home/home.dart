@@ -47,14 +47,14 @@ class Home extends ConsumerWidget {
                   ),
                 ),
               if (studentStatsState.errorOccurred)
-                const Center(
+                Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        "Something went wrong\nPlease refresh the page",
-                        style: TextStyle(
+                        studentStatsState.errorMessage,
+                        style: const TextStyle(
                           color: Colors.redAccent,
                           fontSize: 18,
                           fontWeight: FontWeight.w600,

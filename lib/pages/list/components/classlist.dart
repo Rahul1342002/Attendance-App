@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 
 class ClassTab extends StatefulWidget {
-  final int numberOfContainers; // The specific given number of containers to display
+
+  final int
+      numberOfContainers; // The specific given number of containers to display
 
   // Move the rollNumbers list inside the ClassTab class and make it static
   static final List<String> rollNumbers = [
-    for (int i = 501; i <= 562; i++) i.toString(),
+    for (int i = 0; i <= 99; i++) '5$i',
     // for (int i = 0; i <= 9; i++) '5A$i',
     // for (int i = 0; i <= 8; i++) '5B$i',
   ];
 
-  ClassTab({Key? key, int? numberOfContainers})
+  ClassTab({Key? key,   int? numberOfContainers})
       : numberOfContainers = numberOfContainers ?? rollNumbers.length,
         super(key: key);
 
@@ -25,7 +27,8 @@ class _ClassTabState extends State<ClassTab> {
   void initState() {
     super.initState();
     // Initialize the list of tapped states for each box to false initially
-    isBoxTappedList = List.generate(widget.numberOfContainers, (index) => false);
+    isBoxTappedList =
+        List.generate(widget.numberOfContainers, (index) => false);
   }
 
   @override
@@ -50,7 +53,7 @@ class _ClassTabState extends State<ClassTab> {
                 (index) {
                   int rollNumberIndex = startIndex + index;
                   if (rollNumberIndex >= widget.numberOfContainers) {
-                    return SizedBox
+                    return const SizedBox
                         .shrink(); // Use an empty SizedBox for remaining cells
                   }
                   return GestureDetector(
@@ -69,12 +72,12 @@ class _ClassTabState extends State<ClassTab> {
                         height: 65,
                         decoration: ShapeDecoration(
                           color: isBoxTappedList[rollNumberIndex]
-                              ? Color(0xFF21D2FF)
+                              ? const Color(0xFF21D2FF)
                               : Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          shadows: [
+                          shadows: const [
                             BoxShadow(
                               color: Color(0x3F000000),
                               blurRadius: 4,
@@ -90,7 +93,7 @@ class _ClassTabState extends State<ClassTab> {
                             style: TextStyle(
                               color: isBoxTappedList[rollNumberIndex]
                                   ? Colors.white
-                                  : Color(0xFF568EF8), // Change the text color
+                                  : const Color(0xFF568EF8), // Change the text color
                               fontSize: 30,
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w600,

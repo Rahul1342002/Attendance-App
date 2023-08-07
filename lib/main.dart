@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Attendance',
       // home: const MyHomePage(title: 'Home Page'),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(scaffoldBackgroundColor: Color(0xFF568EF8)),
+      theme: ThemeData(scaffoldBackgroundColor: const Color(0xFF568EF8)),
       routerConfig: Routes,
     );
   }

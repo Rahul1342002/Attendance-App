@@ -64,6 +64,7 @@ class StudentStatsNetworkNotifier extends ChangeNotifier {
       studentStats = studentStatsData;
       notifyListeners();
     } catch (err) {
+      print(err);
       isLoading = false;
       errorOccurred = true;
       errorMessage = err.toString();
