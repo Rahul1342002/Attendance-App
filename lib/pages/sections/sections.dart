@@ -12,7 +12,7 @@ class Section extends StatelessWidget {
       home: Scaffold(
         body: ListView(
           children: const [
-            Nav1(),
+            Nav1(name: "Select Section",),
             Sect(),
           ],
         ),

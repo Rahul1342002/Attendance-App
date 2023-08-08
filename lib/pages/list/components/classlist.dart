@@ -175,7 +175,7 @@ class _ClassTabState extends ConsumerState<ClassTab> {
                         "CSE",
                         widget.sectionName,
                       );
-                  router.go("/home?section=${widget.sectionName}");
+                  router.push("/home?section=${widget.sectionName}");
                 } else {
                   scaffold.showSnackBar(
                     const SnackBar(

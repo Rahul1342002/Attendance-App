@@ -7,7 +7,7 @@ Future<StudentsList> fetchStudentList(
     String date, String branch, String section) async {
   var headers = {'Content-Type': 'application/json'};
   var request = http.Request(
-      'POST', Uri.parse('http://127.0.0.1:16000/getStudentDetails'));
+      'POST', Uri.parse('http://192.168.0.103:16000/getStudentDetails'));
   request.body =
       json.encode({"date": date, "branch": branch, "section": section});
   request.headers.addAll(headers);

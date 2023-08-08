@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Nav1 extends StatelessWidget {
-  const Nav1({super.key});
+  final String name;
+  const Nav1({super.key, required this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -16,14 +17,14 @@ class Nav1 extends StatelessWidget {
           ),
         ),
       ),
-      child: const Row(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: EdgeInsets.only(top: 32),
             child: Text(
-              "Select Section",
+              name,
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 32,
