@@ -6,7 +6,9 @@ Future<bool> updateAttendance(String date, String branch, String section,
     List<String> presentStudents, List<String> absentStudents) async {
   var headers = {'Content-Type': 'application/json'};
   var request = http.Request(
-      'POST', Uri.parse('http://192.168.0.103:16000/updateAttendance'));
+      'POST',
+      Uri.parse(
+          'https://attendance-backend-node-9954mwjmf-rahul1342002.vercel.app/api/updateAttendance'));
   request.body = json.encode({
     "date": date,
     "branch": branch,

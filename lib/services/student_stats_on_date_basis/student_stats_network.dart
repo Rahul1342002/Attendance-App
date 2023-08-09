@@ -7,7 +7,7 @@ Future<StudentStats> fetchStudentStats(
     String date, String branch, String section) async {
   var headers = {'Content-Type': 'application/json'};
   var request = http.Request(
-      'POST', Uri.parse('http://192.168.0.103:16000/getStudentsStats'));
+      'POST', Uri.parse('https://attendance-backend-node-9954mwjmf-rahul1342002.vercel.app/api/getStudentsStats'));
   request.body =
       json.encode({"date": date, "branch": branch, "section": section});
   request.headers.addAll(headers);
